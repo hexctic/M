@@ -5,13 +5,12 @@ import time
 import os
 import platform
 import socket
+import sqlite3
 
 ##################################################
 ## I'll attempt to test some class functionality #
 ## probably non-functional atm                   #
 ##################################################
-
-
 
 ####################################################
 # Actual functional functions , for the most part  #
@@ -21,8 +20,11 @@ current_dir = os.listdir("/workspaces/M")
 
 
 
-        
-        
+def getting_size():
+     os.sock
+
+
+
 def getting_file_names():
     list_of_found_file = []
     dir_list = os.listdir()
@@ -33,24 +35,34 @@ def getting_file_names():
                 print(f"Found the file called {d}...")
                 time.sleep(.2)
                 list_of_found_file.append(d)
-            elif:
-                print("Couldn't find it, try another one.")
-
                 
-                # print list_of_found_file also for future testing purposes .
-                print(list_of_found_file)
-                size = input("Size check ? y/n ")
-                if size ==  "Y" or "y":
-                     print("Checking the size")
-                     ##checking the size starts
-                else: 
-                     print("Exiting")
+                ##size_check()##        
+    
+    
+    def size_check():
+        if  d != file_to_look_for:
+            size = input("Size check ? y/n ")
+            if size in ("y", "Y"):
+                
+                print("Checking the size...")
+
+
+            else :
+                print("Exiting ")
+                print(f"Here's what I got : {list_of_found_file}")
+        elif d != file_to_look_for :
+            print("Could not find the file requested")
+                 
+
+
+
+    
                      
                      # Stops
+    size_check()
 
+         
 
-
-            
 getting_file_names()
 
 
